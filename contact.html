@@ -12,10 +12,6 @@
 <body>
 <header class="nav" id="siteNav">
   <div class="nav-inner">
-    <a href="index.html" class="brand">
-      <span class="dots"><span></span><span></span><span></span></span>
-      yourname.dev
-    </a>
     <nav class="nav-links">
       <a href="index.html">home</a>
       <a href="projects.html">projects</a>
@@ -43,9 +39,39 @@
   <section id="contact" class="page-header">
     <div class="wrap">
       <div class="contact-inner reveal">
-        <div class="eyebrow" style="justify-content:center">$ ./contact.sh --run</div>
         <h2>Let's work together</h2>
         <p>Have a project in mind or just want to say hi? My inbox is always open.</p>
+
+        <form id="contactForm" class="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cf-name">Full Name</label>
+              <input type="text" id="cf-name" name="name" placeholder="Jane Doe" required>
+            </div>
+            <div class="form-group">
+              <label for="cf-email">Email</label>
+              <input type="email" id="cf-email" name="email" placeholder="jane@example.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="cf-subject">Subject</label>
+            <input type="text" id="cf-subject" name="subject" placeholder="Let's build something" required>
+          </div>
+          <div class="form-group">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" placeholder="Tell me a bit about your project..." required></textarea>
+          </div>
+          <div>
+            <button type="submit" class="btn-send" id="sendBtn">
+              Send Message
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7Z"/></svg>
+            </button>
+            <div class="form-status" id="formStatus"></div>
+          </div>
+        </form>
+
+        <div class="contact-divider">or reach me directly</div>
+
         <div class="contact-actions">
           <a href="mailto:zhenyaowan@gmail.com" class="btn btn-primary">zhenyaowan@gmail.com</a>
           <a href="Resume_Wan Zhen Yao_2025.pdf" class="btn btn-outline" download>Download CV</a>
@@ -78,5 +104,6 @@
 </button>
 
 <script src="script.js"></script>
+<script src="contact-form.js"></script>
 </body>
 </html>
