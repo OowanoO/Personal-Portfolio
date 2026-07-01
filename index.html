@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Wan Zhen Yao</title>
-<meta name="description" content="Portfolio and CV of Your Name, Software Developer.">
+<meta name="description" content="Portfolio and CV of Wan Zhen Yao, Software Developer.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -213,14 +213,22 @@ header.nav.scrolled{
 .hero-name{
   font-family:var(--mono);
   font-weight:700;
-  font-size:clamp(32px,4.6vw,54px);
-  line-height:1.12;
+  font-size:clamp(28px,4.2vw,54px);
+  line-height:1.22;
   letter-spacing:-.02em;
   margin-bottom:10px;
 }
+
+/* FIX: cursor is now a slim bar (fixed px width) instead of a huge
+   .5em-wide block, so it always sits on the same line as the last
+   word instead of wrapping onto its own line below the name. */
 .cursor{
-  display:inline-block;width:.5em;height:.85em;background:var(--accent);
-  margin-left:6px;transform:translateY(3px);
+  display:inline-block;
+  width:3px;
+  height:0.85em;
+  background:var(--accent);
+  margin-left:4px;
+  vertical-align:text-bottom;
   animation:blink 1s step-end infinite;
 }
 @keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
@@ -393,8 +401,6 @@ footer p{font-family:var(--mono);font-size:12.5px;color:var(--text-dim)}
     <nav class="nav-links">
       <a href="#home">home</a>
       <a href="#about">about</a>
-      <a href="#skills">skills</a>
-      <a href="#experience">experience</a>
       <a href="#education">education</a>
       <a href="#contact">contact</a>
     </nav>
@@ -427,7 +433,7 @@ footer p{font-family:var(--mono);font-size:12.5px;color:var(--text-dim)}
 
       <div class="profile-card reveal">
         <div class="profile-photo">
-          <!-- swap this SVG for <img src="your-photo.jpg" alt="Your Name"> -->
+          <!-- swap this SVG for <img src="your-photo.jpg" alt="Wan Zhen Yao"> -->
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
         </div>
         <div class="profile-name">Wan Zhen Yao</div>
@@ -450,7 +456,7 @@ footer p{font-family:var(--mono);font-size:12.5px;color:var(--text-dim)}
           </div>
           <div class="contact-text">
             <span class="label">Location</span>
-            <span class="value">Your City, Country</span>
+            <span class="value">Klang, Malaysia</span>
           </div>
         </div>
 
@@ -468,14 +474,14 @@ footer p{font-family:var(--mono);font-size:12.5px;color:var(--text-dim)}
       </div>
 
       <div class="hero-inner">
-        <h1 class="hero-name">Hi, I'm Wan Zhen Yao<span class="cursor"></span></h1>
+        <h1 class="hero-name">Hi, I'm Wan Zhen Yao</h1>
         <div class="hero-role"><span id="typedRole" class="type-cursor"></span></div>
         <p class="hero-desc">
           I design and build clean, reliable software — from mobile apps to full-stack web
           products. I care about thoughtful UX, readable code, and shipping things that work.
         </p>
         <div class="hero-actions">
-          <a href="resume.pdf" class="btn btn-primary" download>Download CV</a>
+          <a href="Resume_Wan Zhen Yao_2025.pdf" class="btn btn-primary" download>Download CV</a>
           <a href="#contact" class="btn btn-outline">Say hello</a>
         </div>
       </div>
@@ -654,7 +660,7 @@ footer p{font-family:var(--mono);font-size:12.5px;color:var(--text-dim)}
         <h2>Let's work together</h2>
         <p>Have a project in mind or just want to say hi? My inbox is always open.</p>
         <div class="contact-actions">
-          <a href="mailto:you@email.com" class="btn btn-primary">you@email.com</a>
+          <a href="mailto:zhenyaowan@gmail.com" class="btn btn-primary">zhenyaowan@gmail.com</a>
           <a href="resume.pdf" class="btn btn-outline" download>Download CV</a>
         </div>
         <div class="social-row">
@@ -676,7 +682,7 @@ footer p{font-family:var(--mono);font-size:12.5px;color:var(--text-dim)}
 
 <footer>
   <div class="wrap" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
-    <p>© <span id="year"></span> Your Name. Built with HTML, CSS &amp; JS.</p>
+    <p>© <span id="year"></span> Wan Zhen Yao. Built with HTML, CSS &amp; JS.</p>
     <p>Designed for readability, shipped for speed.</p>
   </div>
 </footer>
