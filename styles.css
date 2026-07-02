@@ -99,7 +99,7 @@ header.nav.scrolled{
   box-shadow:0 8px 30px rgba(0,0,0,.35);
 }
 .nav-inner{
-  max-width:var(--maxw);margin:0 auto;padding:20px 32px;
+  max-width:var(--maxw);margin:0 auto;padding:20px 90px 20px 32px;
   display:flex;align-items:center;justify-content:flex-end;gap:48px;
 }
 .dots{display:flex;gap:5px}
@@ -497,6 +497,7 @@ footer p{font-family:var(--mono);font-size:12.5px;color:var(--text-dim)}
   .nav-links{display:none}
   .nav-cta .btn-outline{display:none}
   .hamburger{display:flex}
+  .nav-inner{padding:20px 32px}
   .about-grid{grid-template-columns:1fr;gap:40px}
   section{padding:100px 0}
   .stack-section{padding:48px 0}
