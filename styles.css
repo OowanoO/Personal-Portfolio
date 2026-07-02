@@ -299,6 +299,8 @@ header.nav.scrolled{
   display:flex;flex-direction:column;
 }
 .project-card:hover{transform:translateY(-6px);border-color:var(--accent);box-shadow:0 16px 40px rgba(0,0,0,.35)}
+.project-card-link{cursor:pointer}
+.project-card-link:active{transform:translateY(-2px) scale(.98);transition-duration:.1s}
 .project-image{
   height:190px;position:relative;overflow:hidden;
   display:flex;align-items:center;justify-content:center;
