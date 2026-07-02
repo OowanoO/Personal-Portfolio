@@ -43,11 +43,11 @@ button{font:inherit;cursor:pointer;background:none;border:none;color:inherit}
 
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px}
 
-section{padding:120px 0;position:relative}
+section{padding:140px 0;position:relative}
 
-.stack-section{padding-top:56px}
+.stack-section{padding:64px 0}
 
-.page-header{padding:160px 0 60px}
+.page-header{padding:170px 0 80px}
 
 .eyebrow{
   font-family:var(--mono);
@@ -100,7 +100,7 @@ header.nav.scrolled{
 }
 .nav-inner{
   max-width:var(--maxw);margin:0 auto;padding:20px 32px;
-  display:flex;align-items:center;justify-content:space-between;
+  display:flex;align-items:center;justify-content:flex-end;gap:48px;
 }
 .dots{display:flex;gap:5px}
 .dots span{width:8px;height:8px;border-radius:50%;display:block}
@@ -108,7 +108,7 @@ header.nav.scrolled{
 .dots span:nth-child(2){background:#FEBC2E}
 .dots span:nth-child(3){background:#28C840}
 
-.nav-links{display:flex;align-items:center;justify-content:center;gap:34px;flex:1}
+.nav-links{display:flex;align-items:center;gap:34px}
 .nav-links a{
   font-family:var(--mono);font-size:13px;color:var(--text-muted);
   position:relative;padding:4px 0;transition:color .2s ease;
@@ -131,7 +131,7 @@ header.nav.scrolled{
 .btn-outline{border:1px solid var(--border);color:var(--text)}
 .btn-outline:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
 
-.nav-cta{display:flex;align-items:center;gap:14px;margin-left:auto}
+.nav-cta{display:flex;align-items:center;gap:14px}
 .hamburger{display:none;flex-direction:column;gap:5px;width:26px}
 .hamburger span{height:2px;background:var(--text);width:100%;transition:transform .25s ease, opacity .25s ease}
 
@@ -498,8 +498,9 @@ footer p{font-family:var(--mono);font-size:12.5px;color:var(--text-dim)}
   .nav-cta .btn-outline{display:none}
   .hamburger{display:flex}
   .about-grid{grid-template-columns:1fr;gap:40px}
-  section{padding:88px 0}
-  .page-header{padding:140px 0 40px}
+  section{padding:100px 0}
+  .stack-section{padding:48px 0}
+  .page-header{padding:150px 0 56px}
   .contact-inner{padding:44px 26px}
   .section-head-row{flex-direction:column;align-items:flex-start;gap:16px}
 }
