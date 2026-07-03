@@ -102,11 +102,6 @@ header.nav.scrolled{
   max-width:var(--maxw);margin:0 auto;padding:20px 90px 20px 32px;
   display:flex;align-items:center;justify-content:flex-end;gap:48px;
 }
-.dots{display:flex;gap:5px}
-.dots span{width:8px;height:8px;border-radius:50%;display:block}
-.dots span:nth-child(1){background:#FF5F57}
-.dots span:nth-child(2){background:#FEBC2E}
-.dots span:nth-child(3){background:#28C840}
 
 .nav-links{display:flex;align-items:center;gap:34px}
 .nav-links a{
@@ -257,9 +252,11 @@ header.nav.scrolled{
   background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;
 }
 .terminal-head{
-  padding:12px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px;
+  padding:16px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;
 }
-.terminal-head span{font-family:var(--mono);font-size:12px;color:var(--text-dim);margin-left:6px}
+.terminal-head-label{
+  font-family:var(--sans);font-weight:700;font-size:17px;color:var(--text);text-align:left;
+}
 .terminal-body{padding:22px;font-family:var(--mono);font-size:14px}
 .stat-row{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px dashed var(--border)}
 .stat-row:last-child{border-bottom:none}
@@ -364,11 +361,15 @@ header.nav.scrolled{
 .modal-desc p{margin-bottom:16px}
 .modal-desc p:last-child{margin-bottom:0}
 .modal-desc strong{color:var(--text);font-weight:700}
-.modal-github-btn{margin-top:28px}
+.modal-image{
+  margin:-44px -44px 28px;border-radius:16px 16px 0 0;overflow:hidden;height:260px;
+}
+.modal-image img{width:100%;height:100%;object-fit:cover;display:block}
 
 @media (max-width:600px){
   .project-modal{padding:30px 22px;max-height:88vh}
   .modal-title{padding-right:30px}
+  .modal-image{margin:-30px -22px 22px;height:190px}
 }
 
 @media (max-width:900px){
