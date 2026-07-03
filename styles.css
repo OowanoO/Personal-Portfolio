@@ -301,6 +301,9 @@ header.nav.scrolled{
 .project-card:hover{transform:translateY(-6px);border-color:var(--accent);box-shadow:0 16px 40px rgba(0,0,0,.35)}
 .project-card-link{cursor:pointer}
 .project-card-link:active{transform:translateY(-2px) scale(.98);transition-duration:.1s}
+.project-card-modal{cursor:pointer}
+.project-card-modal:active{transform:translateY(-2px) scale(.98);transition-duration:.1s}
+.project-card-modal:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 .project-image{
   height:190px;position:relative;overflow:hidden;
   display:flex;align-items:center;justify-content:center;
@@ -320,14 +323,53 @@ header.nav.scrolled{
 }
 .project-body{padding:26px 26px 28px;flex:1;display:flex;flex-direction:column}
 .project-category{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--accent);text-transform:uppercase;margin-bottom:12px}
-.project-title{font-family:var(--sans);font-weight:800;font-size:19px;margin-bottom:10px;letter-spacing:-.01em}
-.project-desc{color:var(--text-muted);font-size:14.5px;flex:1}
+.project-title{
+  font-family:var(--sans);font-weight:800;font-size:19px;margin-bottom:10px;letter-spacing:-.01em;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+}
+.project-desc{
+  color:var(--text-muted);font-size:14.5px;flex:1;
+  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;
+}
 .project-link{
   display:inline-flex;align-items:center;gap:6px;margin-top:18px;
   font-family:var(--mono);font-size:12.5px;color:var(--text);border-top:1px solid var(--border);padding-top:16px;
 }
 .project-link svg{width:14px;height:14px;transition:transform .2s ease}
 .project-card:hover .project-link svg{transform:translateX(4px)}
+
+/* ---- project modal (full write-up) ---- */
+.project-modal-overlay{
+  position:fixed;inset:0;background:rgba(6,7,9,.78);backdrop-filter:blur(4px);
+  display:flex;align-items:center;justify-content:center;padding:24px;
+  z-index:200;opacity:0;pointer-events:none;transition:opacity .25s ease;
+}
+.project-modal-overlay.open{opacity:1;pointer-events:auto}
+.project-modal{
+  background:var(--surface);border:1px solid var(--border);border-radius:16px;
+  max-width:680px;width:100%;max-height:85vh;overflow-y:auto;padding:44px;
+  position:relative;transform:translateY(16px) scale(.98);transition:transform .25s ease;
+}
+.project-modal-overlay.open .project-modal{transform:translateY(0) scale(1)}
+.project-modal-close{
+  position:absolute;top:20px;right:20px;width:38px;height:38px;border-radius:8px;
+  border:1px solid var(--border);background:var(--surface-hover);color:var(--text-muted);
+  display:flex;align-items:center;justify-content:center;transition:border-color .2s ease, color .2s ease;
+}
+.project-modal-close:hover{border-color:var(--accent);color:var(--accent)}
+.project-modal-close svg{width:16px;height:16px}
+.modal-category{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--accent);text-transform:uppercase;margin-bottom:14px}
+.modal-title{font-family:var(--sans);font-weight:800;font-size:clamp(22px,3vw,28px);margin-bottom:22px;padding-right:36px;letter-spacing:-.01em}
+.modal-desc{color:var(--text-muted);font-size:15px;line-height:1.75}
+.modal-desc p{margin-bottom:16px}
+.modal-desc p:last-child{margin-bottom:0}
+.modal-desc strong{color:var(--text);font-weight:700}
+.modal-github-btn{margin-top:28px}
+
+@media (max-width:600px){
+  .project-modal{padding:30px 22px;max-height:88vh}
+  .modal-title{padding-right:30px}
+}
 
 @media (max-width:900px){
   .projects-grid{grid-template-columns:repeat(2,1fr)}

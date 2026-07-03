@@ -53,24 +53,18 @@
             </div>
           </div>
         </div>
-        <a class="project-card project-card-link reveal" href="https://github.com/OowanoO/CJOP" target="_blank" rel="noopener">
-          <div class="project-image"><img src="u.jpg" alt="Fitness Tracker App"></div>
+        <div class="project-card project-card-modal reveal" data-modal-target="modal-cjop-social-app" tabindex="0" role="button" aria-haspopup="dialog">
+          <div class="project-image"><img src="u.jpg" alt="Social Media App"></div>
           <div class="project-body">
             <div class="project-category">Mobile App</div>
             <h3 class="project-title">Social Media App</h3>
-          <p class="project-desc">
-Designed and developed a full-stack mobile social media platform, <strong>Citizen's Journalist Online Platform (CJOP)</strong>, in collaboration with <strong>SME Malaysia Media Group</strong>. Built using <strong>React Native</strong> for the frontend and <strong>Node.js</strong> for backend development, the application provides a modern, responsive, and native-like Android experience while supporting scalable RESTful API services.
-<br><br>
-The platform utilizes <strong>Supabase</strong> for database management, authentication, and real-time data synchronization. To enhance user engagement, <strong>ZEGOCLOUD</strong> was integrated to provide high-quality live streaming capabilities, allowing citizen journalists to broadcast live events directly to the community. User authentication was strengthened through <strong>Twilio SMS OTP verification</strong>, ensuring secure account registration and login.
-<br><br>
-The project focused on improving the client's original prototype by redesigning the user interface, enhancing user experience, optimizing application performance, reducing system errors, and implementing smoother navigation throughout the application. Additional client-requested features, including premium live event broadcasting and secure user verification, were successfully delivered, demonstrating strong capabilities in full-stack mobile development, cloud services, third-party API integration, and collaborative software engineering.
-</p>
+            <p class="project-desc">A full-stack mobile social media platform (CJOP) built with React Native and Node.js, featuring live streaming and OTP-secured accounts.</p>
             <div class="project-link">
-              View on GitHub
+              Read more
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </div>
           </div>
-        </a>
+        </div>
         <div class="project-card reveal">
           <div class="project-image"><span>Project Image</span></div>
           <div class="project-body">
@@ -120,8 +114,29 @@ The project focused on improving the client's original prototype by redesigning 
           </div>
         </div>
       </div>
+      <template id="modal-cjop-social-app">
+        <div class="modal-category">Mobile App</div>
+        <h3 class="modal-title">Social Media App</h3>
+        <div class="modal-desc">
+          <p>Designed and developed a full-stack mobile social media platform, <strong>Citizen's Journalist Online Platform (CJOP)</strong>, in collaboration with <strong>SME Malaysia Media Group</strong>. Built using <strong>React Native</strong> for the frontend and <strong>Node.js</strong> for backend development, the application provides a modern, responsive, and native-like Android experience while supporting scalable RESTful API services.</p>
+          <p>The platform utilizes <strong>Supabase</strong> for database management, authentication, and real-time data synchronization. To enhance user engagement, <strong>ZEGOCLOUD</strong> was integrated to provide high-quality live streaming capabilities, allowing citizen journalists to broadcast live events directly to the community. User authentication was strengthened through <strong>Twilio SMS OTP verification</strong>, ensuring secure account registration and login.</p>
+          <p>The project focused on improving the client's original prototype by redesigning the user interface, enhancing user experience, optimizing application performance, reducing system errors, and implementing smoother navigation throughout the application. Additional client-requested features, including premium live event broadcasting and secure user verification, were successfully delivered, demonstrating strong capabilities in full-stack mobile development, cloud services, third-party API integration, and collaborative software engineering.</p>
+        </div>
+        <a href="https://github.com/OowanoO/CJOP" target="_blank" rel="noopener" class="btn btn-primary modal-github-btn">
+            View on GitHub
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.6 2.8 5.5 3.1 5.5 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4.1 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+          </a>
+      </template>
     </div>
   </section>
+      <div class="project-modal-overlay" id="projectModalOverlay">
+        <div class="project-modal" role="dialog" aria-modal="true">
+          <button class="project-modal-close" id="projectModalClose" aria-label="Close">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+          </button>
+          <div class="project-modal-body" id="projectModalBody"></div>
+        </div>
+      </div>
 </main>
 
 <footer>
@@ -136,5 +151,6 @@ The project focused on improving the client's original prototype by redesigning 
 </button>
 
 <script src="script.js"></script>
+<script src="project-modal.js"></script>
 </body>
 </html>
