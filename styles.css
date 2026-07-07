@@ -431,6 +431,8 @@ header.nav.scrolled{
   margin:8px 0 28px;padding-bottom:14px;border-bottom:1px solid var(--border);
 }
 .timeline + .subsection-title{margin-top:64px}
+.skills-grid + .subsection-title{margin-top:56px}
+.tools-row + .subsection-title{margin-top:56px}
 
 /* ============================================================
    EXPERIENCE — git log styled timeline
@@ -451,6 +453,15 @@ header.nav.scrolled{
 .commit-list{display:flex;flex-direction:column;gap:8px}
 .commit-list li{color:var(--text-muted);font-size:14.5px;display:flex;gap:10px}
 .commit-list li::before{content:'▸';color:var(--accent);flex-shrink:0}
+.commit-list li strong{color:var(--text);font-weight:700}
+
+.tools-row{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:8px}
+.tool-pill{
+  font-family:var(--mono);font-size:13px;color:var(--text);
+  background:var(--surface);border:1px solid var(--border);border-radius:999px;
+  padding:8px 18px;transition:border-color .2s ease, transform .2s ease;
+}
+.tool-pill:hover{border-color:var(--accent);transform:translateY(-2px)}
 
 /* ============================================================
    EDUCATION — json styled block

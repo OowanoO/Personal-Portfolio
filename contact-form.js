@@ -1,5 +1,5 @@
 // ---------- contact form -> mailto ----------
-const CONTACT_EMAIL = 'zhenyaowan@gmail.com';
+const CONTACT_EMAIL = 'zhenyaowan10@gmail.com';
 
 const contactForm = document.getElementById('contactForm');
 const sendBtn = document.getElementById('sendBtn');

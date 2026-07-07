@@ -1,5 +1,5 @@
 // ---------- typewriter role text ----------
-const roles = ['Software Developer', 'Mobile App Developer', 'UI/UX Enthusiast', 'Problem Solver'];
+const roles = ['Business Analyst', 'Full-Stack Developer', 'Data Science Graduate', 'Problem Solver'];
 const roleEl = document.getElementById('typedRole');
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
