@@ -41,14 +41,14 @@
       <h2 class="section-title reveal">All Projects</h2>
       <p class="page-sub reveal">A selection of things I&rsquo;ve designed, built, and shipped &mdash; spanning web, mobile, and backend work.</p>
       <div class="projects-grid">
-        <div class="project-card reveal">
-          <div class="project-image"><span>Project Image</span></div>
+        <div class="project-card project-card-modal reveal" data-modal-target="modal-cjop-social-app" tabindex="0" role="button" aria-haspopup="dialog">
+          <div class="project-image"><img src="u.jpg" alt="Social Media App"></div>
           <div class="project-body">
-            <div class="project-category">Web Design</div>
-            <h3 class="project-title">E-Commerce Dashboard</h3>
-            <p class="project-desc">An admin dashboard for tracking orders, inventory, and revenue in real time. Focused on data clarity and fast filtering.</p>
+            <div class="project-category">Mobile App</div>
+            <h3 class="project-title">Social Media App</h3>
+            <p class="project-desc">A full-stack mobile social media platform (CJOP) built with React Native and Node.js, featuring live streaming and OTP-secured accounts.</p>
             <div class="project-link">
-              View case study
+              Read more
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </div>
           </div>
@@ -65,14 +65,38 @@
             </div>
           </div>
         </div>
-        <div class="project-card project-card-modal reveal" data-modal-target="modal-cjop-social-app" tabindex="0" role="button" aria-haspopup="dialog">
-          <div class="project-image"><img src="u.jpg" alt="Social Media App"></div>
+        <a class="project-card project-card-link reveal" href="https://titaniumrewards.com.my/" target="_blank" rel="noopener">
+          <div class="project-image"><span>Project Image</span></div>
           <div class="project-body">
-            <div class="project-category">Mobile App</div>
-            <h3 class="project-title">Social Media App</h3>
-            <p class="project-desc">A full-stack mobile social media platform (CJOP) built with React Native and Node.js, featuring live streaming and OTP-secured accounts.</p>
+            <div class="project-category">WordPress Development</div>
+            <h3 class="project-title">Titanium Rewards</h3>
+            <p class="project-desc">A loyalty rewards microsite for HCK Capital Group, connecting real estate agents, buyers, and referrers to exclusive perks and a companion mobile app.</p>
             <div class="project-link">
-              Read more
+              Visit Website
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </div>
+          </div>
+        </a>
+        <a class="project-card project-card-link reveal" href="https://platinumsuites.com.my/" target="_blank" rel="noopener">
+          <div class="project-image"><span>Project Image</span></div>
+          <div class="project-body">
+            <div class="project-category">WordPress Development</div>
+            <h3 class="project-title">Platinum Premium Suites</h3>
+            <p class="project-desc">A property launch microsite for Platinum Premium Suites at HCK Tower, featuring location highlights, a gallery, unit layouts, and a lead-registration form.</p>
+            <div class="project-link">
+              Visit Website
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </div>
+          </div>
+        </a>
+        <div class="project-card reveal">
+          <div class="project-image"><span>Project Image</span></div>
+          <div class="project-body">
+            <div class="project-category">Web Design</div>
+            <h3 class="project-title">E-Commerce Dashboard</h3>
+            <p class="project-desc">An admin dashboard for tracking orders, inventory, and revenue in real time. Focused on data clarity and fast filtering.</p>
+            <div class="project-link">
+              View case study
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </div>
           </div>
@@ -126,6 +150,16 @@
           </div>
         </div>
       </div>
+      <template id="modal-cjop-social-app">
+        <div class="modal-image"><img src="u.jpg" alt="Social Media App"></div>
+        <div class="modal-category">Mobile App</div>
+        <h3 class="modal-title">Social Media App</h3>
+        <div class="modal-desc">
+          <p>Designed and developed a full-stack mobile social media platform, <strong>Citizen's Journalist Online Platform (CJOP)</strong>, in collaboration with <strong>SME Malaysia Media Group</strong>. Built using <strong>React Native</strong> for the frontend and <strong>Node.js</strong> for backend development, the application provides a modern, responsive, and native-like Android experience while supporting scalable RESTful API services.</p>
+          <p>The platform utilizes <strong>Supabase</strong> for database management, authentication, and real-time data synchronization. To enhance user engagement, <strong>ZEGOCLOUD</strong> was integrated to provide high-quality live streaming capabilities, allowing citizen journalists to broadcast live events directly to the community. User authentication was strengthened through <strong>Twilio SMS OTP verification</strong>, ensuring secure account registration and login.</p>
+          <p>The project focused on improving the client's original prototype by redesigning the user interface, enhancing user experience, optimizing application performance, reducing system errors, and implementing smoother navigation throughout the application. Additional client-requested features, including premium live event broadcasting and secure user verification, were successfully delivered, demonstrating strong capabilities in full-stack mobile development, cloud services, third-party API integration, and collaborative software engineering.</p>
+        </div>
+      </template>
       <template id="modal-sales-workflow-automation">
         
         <div class="modal-category">Business Analysis</div>
@@ -135,16 +169,6 @@
           <p>I implemented automated cross-checking mechanisms within the system to independently validate submissions, significantly reducing manual errors such as duplicate entries. This freed up the team to focus on exceptions rather than routine checks.</p>
           <p>Acting as the primary liaison between business stakeholders and a third-party development team, I translated business requirements into clear technical specifications, and managed the project end-to-end &mdash; from gap analysis and SDLC coordination to tracking timelines and release milestones.</p>
           <p><strong>Note:</strong> company name, internal systems, and vendor details have been withheld to respect client confidentiality. This description focuses on my role, actions, and impact rather than proprietary specifics.</p>
-        </div>
-      </template>
-      <template id="modal-cjop-social-app">
-        <div class="modal-image"><img src="u.jpg" alt="Social Media App"></div>
-        <div class="modal-category">Mobile App</div>
-        <h3 class="modal-title">Social Media App</h3>
-        <div class="modal-desc">
-          <p>Designed and developed a full-stack mobile social media platform, <strong>Citizen's Journalist Online Platform (CJOP)</strong>, in collaboration with <strong>SME Malaysia Media Group</strong>. Built using <strong>React Native</strong> for the frontend and <strong>Node.js</strong> for backend development, the application provides a modern, responsive, and native-like Android experience while supporting scalable RESTful API services.</p>
-          <p>The platform utilizes <strong>Supabase</strong> for database management, authentication, and real-time data synchronization. To enhance user engagement, <strong>ZEGOCLOUD</strong> was integrated to provide high-quality live streaming capabilities, allowing citizen journalists to broadcast live events directly to the community. User authentication was strengthened through <strong>Twilio SMS OTP verification</strong>, ensuring secure account registration and login.</p>
-          <p>The project focused on improving the client's original prototype by redesigning the user interface, enhancing user experience, optimizing application performance, reducing system errors, and implementing smoother navigation throughout the application. Additional client-requested features, including premium live event broadcasting and secure user verification, were successfully delivered, demonstrating strong capabilities in full-stack mobile development, cloud services, third-party API integration, and collaborative software engineering.</p>
         </div>
       </template>
     </div>
