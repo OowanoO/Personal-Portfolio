@@ -287,6 +287,7 @@ header.nav.scrolled{
 .stat-row:last-child{border-bottom:none}
 .stat-row .k{color:var(--text-dim)}
 .stat-row .v{color:var(--text)}
+.stat-row .v-success{color:#4ADE80;font-weight:600}
 
 /* ============================================================
    SKILLS — outlined icon, horizontal card layout
