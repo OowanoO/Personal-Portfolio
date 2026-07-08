@@ -2,6 +2,29 @@
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+// ---------- page loader ----------
+const pageLoader = document.getElementById('pageLoader');
+if (pageLoader) {
+  document.body.style.overflow = 'hidden';
+  const MIN_VISIBLE_MS = 700;
+  const shownAt = Date.now();
+
+  const hideLoader = () => {
+    const elapsed = Date.now() - shownAt;
+    const wait = Math.max(0, MIN_VISIBLE_MS - elapsed);
+    setTimeout(() => {
+      pageLoader.classList.add('loaded');
+      document.body.style.overflow = '';
+    }, wait);
+  };
+
+  if (document.readyState === 'complete') {
+    hideLoader();
+  } else {
+    window.addEventListener('load', hideLoader);
+  }
+}
+
 // ---------- nav scroll state ----------
 const nav = document.getElementById('siteNav');
 const toTop = document.getElementById('toTop');
